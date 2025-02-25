@@ -10,32 +10,39 @@
         /* Reset & Base Styles */
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: 'Quicksand', sans-serif;
             background-color: #121212;
             color: #ffffff;
             line-height: 1.6;
         }
+
         /* Header */
         header {
-            background-color: #263238;
-            padding: 20px;
+            background-color: #1e1e1e;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
             header h1 {
                 margin: 0;
                 color: #03a9f4;
+                font-size: 2.5em;
+                font-weight: 700;
             }
+
         /* Main Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         /* Section Headings */
         section {
             margin-bottom: 50px;
@@ -45,12 +52,16 @@
                 border-bottom: 2px solid #03a9f4;
                 padding-bottom: 10px;
                 margin-bottom: 20px;
+                font-size: 2em;
+                font-weight: 500;
             }
+
         /* About Section */
         #about {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            margin-bottom: 50px;
         }
 
             #about img.profile-photo {
@@ -59,12 +70,17 @@
                 border-radius: 50%;
                 object-fit: cover;
                 border: 3px solid #03a9f4;
+                margin-right: 20px;
+                transition: transform 0.3s ease;
             }
+
+                #about img.profile-photo:hover {
+                    transform: scale(1.05);
+                }
 
             #about .about-text {
                 flex: 1;
                 min-width: 280px;
-                margin-left: 20px;
             }
 
             #about ul {
@@ -73,15 +89,17 @@
             }
 
             #about li {
-                margin: 5px 0;
+                margin: 10px 0;
             }
 
             #about a {
                 color: #03a9f4;
                 text-decoration: none;
+                transition: color 0.3s ease;
             }
 
                 #about a:hover {
+                    color: #ffffff;
                     text-decoration: underline;
                 }
 
@@ -90,25 +108,39 @@
             height: 40px;
             vertical-align: middle;
             margin-right: 5px;
+            transition: transform 0.3s ease;
         }
+
+            .social-link img:hover {
+                transform: scale(1.1);
+            }
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         /* Project Card */
         .game {
-            background-color: #263238;
+            background-color: #1e1e1e;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+            .game:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
 
             .game h3 {
                 color: #03a9f4;
                 margin-top: 0;
-                font-size: 1.2em;
+                font-size: 1.5em;
+                font-weight: 500;
             }
 
             .game iframe {
@@ -116,6 +148,7 @@
                 height: 200px;
                 border: none;
                 border-radius: 8px;
+                margin-bottom: 10px;
             }
 
         .store-icons {
@@ -131,7 +164,12 @@
                 height: auto;
                 display: inline-block;
                 margin: 5px;
+                transition: transform 0.3s ease;
             }
+
+                .store-icons img:hover {
+                    transform: scale(1.1);
+                }
 
         @media only screen and (max-width: 600px) {
             .game iframe {
@@ -152,12 +190,21 @@
                     margin-top: 20px;
                 }
         }
+
         /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #263238;
+            background-color: #1e1e1e;
+            margin-top: 50px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
         }
+
+            footer p {
+                margin: 0;
+                color: #03a9f4;
+                font-size: 0.9em;
+            }
     </style>
 </head>
 <body>
