@@ -1,341 +1,447 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="icon" href="tab-icon.png" type="image/png">
-  <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Akif Arslan - Portfolio</title>
+    <link rel="icon" href="tab-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+        }
 
-    .container {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        /* Header */
+        header {
+            background-color: #263238;
+            padding: 20px;
+            text-align: center;
+        }
 
-    h1 {
-      color: #03a9f4;
-      background-color: #263238;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+            header h1 {
+                margin: 0;
+                color: #03a9f4;
+            }
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Section Headings */
+        section {
+            margin-bottom: 50px;
+        }
 
-    h2 {
-      color: #03a9f4;
-    }
+            section h2 {
+                border-bottom: 2px solid #03a9f4;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+        /* About Section */
+        #about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
 
-    .game {
-      margin-bottom: 40px;
-      padding: 20px;
-      background-color: #263238;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    }
+            #about img.profile-photo {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #03a9f4;
+            }
 
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      border-radius: 8px;
-    }
+            #about .about-text {
+                flex: 1;
+                min-width: 280px;
+                margin-left: 20px;
+            }
 
-    .store-icons a {
-      text-decoration: none;
-    }
+            #about ul {
+                list-style: none;
+                padding: 0;
+            }
 
-    .store-icons {
-      margin-top: 20px;
-    }
+            #about li {
+                margin: 5px 0;
+            }
 
-    .store-icons img {
-      width: 125px;
-      height: auto; 
-      display: inline-block;
-      margin: 0 10px;
-    }
+            #about a {
+                color: #03a9f4;
+                text-decoration: none;
+            }
 
-    @media only screen and (max-width: 600px) {
-      .game {
-        padding: 10px;
-      }
+                #about a:hover {
+                    text-decoration: underline;
+                }
 
-      iframe {
-        height: 200px;
-      }
+        .social-link img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        /* Project Card */
+        .game {
+            background-color: #263238;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            padding: 15px;
+        }
 
-      .store-icons img {
-        width: 80px;
-      }
-    }
-  </style>
+            .game h3 {
+                color: #03a9f4;
+                margin-top: 0;
+                font-size: 1.2em;
+            }
+
+            .game iframe {
+                width: 100%;
+                height: 200px;
+                border: none;
+                border-radius: 8px;
+            }
+
+        .store-icons {
+            margin-top: 10px;
+        }
+
+            .store-icons a {
+                text-decoration: none;
+            }
+
+            .store-icons img {
+                width: 100px;
+                height: auto;
+                display: inline-block;
+                margin: 5px;
+            }
+
+        @media only screen and (max-width: 600px) {
+            .game iframe {
+                height: 150px;
+            }
+
+            .store-icons img {
+                width: 80px;
+            }
+
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+                #about .about-text {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #263238;
+        }
+    </style>
+</head>
 <body>
+    <header>
+        <h1>Mehmet Akif Arslan</h1>
+    </header>
+    <main>
+        <div class="container">
+            <!-- About Section -->
+            <section id="about">
+                <img src="photo.png" alt="Mehmet Akif Arslan" class="profile-photo">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p>
+                        I graduated from the Computer Engineering department and began honing my skills in game development during my studies. I started my journey with GameMaker Studio 2 and later transitioned to Unity. My Unity adventure began in 2022 when I joined Boom Codes, where I have since developed numerous hyper-casual and hybrid-casual games. This experience has allowed me to refine my skills and contribute to the successful delivery of engaging gaming experiences.
+                    </p>
+                    <ul>
+                        <li>Email: <a href="mailto:makifyos@gmail.com">makifyos@gmail.com</a></li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/makifarslan/" target="_blank" class="social-link">
+                                <img src="linked-icon.png" alt="LinkedIn">LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-    <div class="container">
-        <h1>Portfolio</h1>
-
-        <div class="game">
-            <h2>Idle Food Fest!</h2>
-            <iframe src="https://www.youtube.com/embed/VZgwc5JvYdg" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/us/app/idle-food-fest/id6680151213" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1: Idle Food Fest! -->
+                    <div class="game">
+                        <h3>Idle Food Fest!</h3>
+                        <iframe src="https://www.youtube.com/embed/VZgwc5JvYdg" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/us/app/idle-food-fest/id6680151213" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2: Gun Plus Fever -->
+                    <div class="game">
+                        <h3>Gun Plus Fever</h3>
+                        <iframe src="https://www.youtube.com/embed/dCH3jq79QKk" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/gun-plus-fever/id6449928628" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.GunPlusFever" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 3: Prism Puzzle -->
+                    <div class="game">
+                        <h3>Prism Puzzle</h3>
+                        <iframe src="https://www.youtube.com/embed/5iglfH85wAY" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/us/app/prism-puzzle/id6692616475" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 4: My Tasty Empire -->
+                    <div class="game">
+                        <h3>My Tasty Empire</h3>
+                        <iframe src="https://www.youtube.com/embed/J-f20tuFPAk" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/my-tasty-empire/id6502766369" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MyTastyEmpire" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 5: My Snack Empire -->
+                    <div class="game">
+                        <h3>My Snack Empire</h3>
+                        <iframe src="https://www.youtube.com/embed/CBsDGqlyRlY" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/tr/app/my-snack-empire/id6736908202" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MySnackEmpire" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 6: Amusement Park Mania -->
+                    <div class="game">
+                        <h3>Amusement Park Mania</h3>
+                        <iframe src="https://www.youtube.com/embed/rgvkV1xO6Lk" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/tr/app/amusement-park-mania/id6698870685" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.AmusementParkMania" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 7: Military Idle -->
+                    <div class="game">
+                        <h3>Military Idle</h3>
+                        <iframe src="https://www.youtube.com/embed/2NaDAbkprok" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/tr/app/military-idle/id6636485345" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MilitaryIdle" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 8: Throw'N Spin -->
+                    <div class="game">
+                        <h3>Throw'N Spin</h3>
+                        <iframe src="https://www.youtube.com/embed/f7kAaXSY4Ek" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/thrown-spin/id6443603710" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.ThrownSpin" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 9: Jumper Digits -->
+                    <div class="game">
+                        <h3>Jumper Digits</h3>
+                        <iframe src="https://www.youtube.com/embed/bdfLKwScVxo" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/jumper-digits/id1660756863" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 10: Marble Cars -->
+                    <div class="game">
+                        <h3>Marble Cars</h3>
+                        <iframe src="https://www.youtube.com/embed/nPJb7e8xp5A" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MarbleCars" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 11: Monster Truck Bounty Hole -->
+                    <div class="game">
+                        <h3>Monster Truck Bounty Hole</h3>
+                        <iframe src="https://www.youtube.com/embed/zIpNgVGBjvI" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/monster-truck-bounty-hole/id1635712096" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 12: Money Arrow -->
+                    <div class="game">
+                        <h3>Money Arrow</h3>
+                        <iframe src="https://www.youtube.com/embed/DcvbZHqrRMU" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/money-arrow/id1631730552" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 13: Rubberball Runner -->
+                    <div class="game">
+                        <h3>Rubberball Runner</h3>
+                        <iframe src="https://www.youtube.com/embed/2hwMMPEJ-gE" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.RubberballRunner" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 14: Marble Gun Hero -->
+                    <div class="game">
+                        <h3>Marble Gun Hero</h3>
+                        <iframe src="https://www.youtube.com/embed/1SZjsm9ltOg" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <!-- No store link available -->
+                        </div>
+                    </div>
+                    <!-- Project 15: Mining Runner -->
+                    <div class="game">
+                        <h3>Mining Runner</h3>
+                        <iframe src="https://www.youtube.com/embed/AxHX95kVIY0" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/mining-runner/id1638728138" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 16: Hike Up -->
+                    <div class="game">
+                        <h3>Hike Up</h3>
+                        <iframe src="https://www.youtube.com/embed/3Is2ImtVlcQ" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/hike-up/id6451484725" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.HikeUp" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 17: Battery Thrower -->
+                    <div class="game">
+                        <h3>Battery Thrower</h3>
+                        <iframe src="https://www.youtube.com/embed/U3ppAHQSXMM" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/us/app/battery-thrower/id6444262265" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 18: Marble Gun Runner -->
+                    <div class="game">
+                        <h3>Marble Gun Runner</h3>
+                        <iframe src="https://www.youtube.com/embed/yglWRTmyCLU" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MarbleGunRunner" target="_blank">
+                                <img src="android-icon.png" alt="Android">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 19: Women on Throne -->
+                    <div class="game">
+                        <h3>Women on Throne</h3>
+                        <iframe src="https://www.youtube.com/embed/jzExywAKpE8" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/women-on-throne/id1625311161" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 20: Home Craft Master -->
+                    <div class="game">
+                        <h3>Home Craft Master</h3>
+                        <iframe src="https://www.youtube.com/embed/ADBEGGmlVf0" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/home-craft-master/id1618259651" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 21: Pushman Fever -->
+                    <div class="game">
+                        <h3>Pushman Fever</h3>
+                        <iframe src="https://www.youtube.com/embed/ajn58nwdjDY" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/pushman-fever/id6446145370" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 22: Money Heist Runner -->
+                    <div class="game">
+                        <h3>Money Heist Runner</h3>
+                        <iframe src="https://www.youtube.com/embed/mL6VBBaIIl8" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <a href="https://apps.apple.com/be/app/money-heist-runner/id1642276088" target="_blank">
+                                <img src="ios-icon.png" alt="iOS">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 23: Sling Shooter -->
+                    <div class="game">
+                        <h3>Sling Shooter</h3>
+                        <iframe src="https://www.youtube.com/embed/Lq5K6R1dBDg" allowfullscreen></iframe>
+                        <div class="store-icons">
+                            <!-- No store link available -->
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div class="game">
-            <h2>Gun Plus Fever</h2>
-            <iframe src="https://www.youtube.com/embed/dCH3jq79QKk" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/gun-plus-fever/id6449928628" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.GunPlusFever" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Prism Puzzle</h2>
-            <iframe src="https://www.youtube.com/embed/5iglfH85wAY" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/us/app/prism-puzzle/id6692616475" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>My Tasty Empire</h2>
-            <iframe src="https://www.youtube.com/embed/J-f20tuFPAk" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/my-tasty-empire/id6502766369" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MyTastyEmpire" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>My Snack Empire</h2>
-            <iframe src="https://www.youtube.com/embed/CBsDGqlyRlY" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/tr/app/my-snack-empire/id6736908202" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MySnackEmpire" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Amusement Park Mania</h2>
-            <iframe src="https://www.youtube.com/embed/rgvkV1xO6Lk" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/tr/app/amusement-park-mania/id6698870685" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.AmusementParkMania" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Military Idle</h2>
-            <iframe src="https://www.youtube.com/embed/2NaDAbkprok" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/tr/app/military-idle/id6636485345" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MilitaryIdle" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Throw'N Spin</h2>
-            <iframe src="https://www.youtube.com/embed/f7kAaXSY4Ek" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/thrown-spin/id6443603710" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.ThrownSpin" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Jumper Digits</h2>
-            <iframe src="https://www.youtube.com/embed/bdfLKwScVxo" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/jumper-digits/id1660756863" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Marble Cars</h2>
-            <iframe src="https://www.youtube.com/embed/nPJb7e8xp5A" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MarbleCars" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Monster Truck Bounty Hole</h2>
-            <iframe src="https://www.youtube.com/embed/zIpNgVGBjvI" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/monster-truck-bounty-hole/id1635712096" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Money Arrow</h2>
-            <iframe src="https://www.youtube.com/embed/DcvbZHqrRMU" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/money-arrow/id1631730552" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Rubberball Runner</h2>
-            <iframe src="https://www.youtube.com/embed/2hwMMPEJ-gE" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.RubberballRunner" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Marble Gun Hero</h2>
-            <iframe src="https://www.youtube.com/embed/1SZjsm9ltOg" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Mining Runner</h2>
-            <iframe src="https://www.youtube.com/embed/AxHX95kVIY0" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/mining-runner/id1638728138" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Hike Up</h2>
-            <iframe src="https://www.youtube.com/embed/3Is2ImtVlcQ" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/hike-up/id6451484725" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.HikeUp" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Battery Thrower</h2>
-            <iframe src="https://www.youtube.com/embed/U3ppAHQSXMM" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/us/app/battery-thrower/id6444262265" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Marble Gun Runner</h2>
-            <iframe src="https://www.youtube.com/embed/yglWRTmyCLU" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://play.google.com/store/apps/details?id=com.BoomCodes.MarbleGunRunner" target="_blank">
-                    <img src="android-icon.png" alt="Android">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Women on Throne</h2>
-            <iframe src="https://www.youtube.com/embed/jzExywAKpE8" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/women-on-throne/id1625311161" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Home Craft Master</h2>
-            <iframe src="https://www.youtube.com/embed/ADBEGGmlVf0" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/home-craft-master/id1618259651" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Pushman Fever</h2>
-            <iframe src="https://www.youtube.com/embed/ajn58nwdjDY" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/pushman-fever/id6446145370" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Money Heist Runner</h2>
-            <iframe src="https://www.youtube.com/embed/mL6VBBaIIl8" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-                <a href="https://apps.apple.com/be/app/money-heist-runner/id1642276088" target="_blank">
-                    <img src="ios-icon.png" alt="iOS">
-                </a>
-            </div>
-        </div>
-
-        <div class="game">
-            <h2>Sling Shooter</h2>
-            <iframe src="https://www.youtube.com/embed/Lq5K6R1dBDg" frameborder="0" allowfullscreen></iframe>
-            <div class="store-icons">
-
-            </div>
-        </div>
-
-    </div>
-
+    </main>
+    <footer>
+        <p>&copy; 2025 Mehmet Akif Arslan</p>
+    </footer>
 </body>
 </html>
